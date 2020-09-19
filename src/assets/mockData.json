@@ -1,0 +1,68 @@
+{
+  "paths": [
+    {
+      "name": "Frontend Develeopemnt",
+      "id": 1,
+      "shortName": "FE",
+      "tagNames": ["FE", "HTML", "CSS", "JS", "REACT"],
+      "noOfVisits": 123,
+      "githubUrl": "https://github.com/yeshwanth581/Users_with_Posts_React-Redux/",
+      "courses": [
+        {
+          "name": "React.js",
+          "id": 4,
+          "shortName": "React",
+          "svgUrl": "",
+          "isMustLearn": false,
+          "noOfVisits": 56,
+          "resources": [
+            {
+              "id": 1,
+              "title": "div tag",
+              "description": "container to show data",
+              "isMustLearn": true,
+              "topLink": {
+                "free": {
+                  "id": 3,
+                  "link": "",
+                  "upvotes": 123
+                },
+                "paid": {
+                  "id": 7,
+                  "link": "",
+                  "upvotes": 13
+                }
+              },
+              "otherSuggestions": [
+                {
+                  "id": 1,
+                  "link": "",
+                  "upvotes": 123,
+                  "downvotes": 8,
+                  "isPaid": true
+                }
+              ],
+              "practiceUrl": {
+                "name": "Aiport data",
+                "description": "show no of airports in a area",
+                "sandboxUrl": "",
+                "solutionUrl": ""
+              }
+            }
+          ],
+          "finalProject": {
+            "name": "React JS project",
+            "descriptionUrl": "github.com/reactproject_description",
+            "solutionUrl": ""
+          }
+        }
+      ],
+      "prodCodeSample": "url",
+      "deployToCloudTutorialDoc": "url",
+      "nextSteps": [
+        "load db data to elasticsearch",
+        "data engineer that data to get insights"
+      ]
+    }
+  ]
+}

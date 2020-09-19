@@ -1,0 +1,15 @@
+//@import "variables";
+//variables
+$fontFamily: 'Source Sans Pro', serif;
+$backgroundColor: white;
+
+//class-styling
+.App {
+  font-family: $fontFamily;
+  background-color: $backgroundColor;
+}
+
+.headerLink {
+  color:black;
+  font-weight: 500;
+}
