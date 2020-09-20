@@ -11,5 +11,82 @@ $backgroundColor: white;
 
 .headerLink {
   color:black;
-  font-weight: 500;
+  font-weight: 600;
 }
+
+.section-heading {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 2vw;
+}
+
+.card-container {
+  background-color: white;
+  width: 100%;
+  line-height: 25px;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 10px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0s;
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 30px 60px;
+  }
+  .card-heading {
+    text-align: center;
+    font-weight:600;
+  }
+  .card-description {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  .card-tags {
+    padding-top : 5px;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 0.8em;
+    .tag {
+      margin-left: 5px;
+      cursor: pointer;
+      background-color: orange;
+      width: auto;
+      padding: 2.5px 5px;
+      border-radius: 5px;
+      &::before {
+        content: '#';
+      }
+    }
+  }
+}
+
+.home {
+  .header {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .brand-title {
+      font-weight: bold;
+      font-size: 3.3em;
+    }
+    .brand-subtitle {
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+  }
+
+  .homeActionButtons {
+    background-color: ghostwhite;
+    .cardsList {
+      padding: 1em;
+      padding-bottom: 2.5em;
+    }
+  }
+}
+
+
