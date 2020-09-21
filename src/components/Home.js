@@ -1,5 +1,6 @@
 import React from "react";
 import HomeActionButtons from "./HomeActionButtons";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         </p>
       </div>
       <HomeActionButtons />
+      <Footer />
     </div>
   );
 };

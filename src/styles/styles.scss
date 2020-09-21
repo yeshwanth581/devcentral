@@ -21,6 +21,23 @@ $backgroundColor: white;
   padding: 2vw;
 }
 
+.chip {
+  margin-left: 5px;
+  background-color: #3366FF;
+  color:white;
+  font-weight: bold;
+  width: auto;
+  padding: 2.5px 5px;
+  border-radius: 5px;
+  &:link {
+    text-decoration: none;
+  }
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
+}
+
 .card-container {
   background-color: white;
   width: 100%;
@@ -86,6 +103,38 @@ $backgroundColor: white;
     .cardsList {
       padding: 1em;
       padding-bottom: 2.5em;
+    }
+  }
+
+  .footer-section {
+    background-color: white;
+    padding: 2.5em 1em;
+    .footer-items {
+      padding:1em;
+      font-size: 0.9em;
+      .brand-name {
+        font-weight: 700;
+        font-size: 1.2em;
+        padding: 0.3em 0.2em 0.3em 0.6em;
+        color:black;
+        &:link {
+          text-decoration: none;
+        }
+        &:hover {
+          text-decoration: none;
+          color: white;
+        }
+      }
+      .brand-content {
+        padding: 1em 0;
+      }
+    }
+    .footer-icons-list {
+      padding-top:1em;
+      .icon {
+        cursor: pointer;
+        color: black;
+      }
     }
   }
 }
