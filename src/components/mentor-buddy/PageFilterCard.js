@@ -64,7 +64,7 @@ const PageFilterCard = () => {
       <div className="card-heading">Search for a mentor</div>
       <div className="card-description page-description">
         <Row>
-          <Col>
+          <Col className="vertical_line">
             <DropdownButton id="dropdown" size="sm" title={path}>
               {pathDropDownitems}
             </DropdownButton>

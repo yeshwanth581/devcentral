@@ -16,7 +16,7 @@ const Footer = () => {
     <div className="footer-section">
       <Row className="footer-items">
         <Col xs={12} sm={12} md={6} lg={4} xl={4}>
-          <div class="brand-data">
+          <div className="brand-data">
             <span>
               <img src={logo} width="30" height="30" alt="DevCentral Logo" />
             </span>
@@ -36,7 +36,7 @@ const Footer = () => {
               </a>
             </span>
           </div>
-          <div class="brand-content">
+          <div className="brand-content">
             Community created roadmaps, articles, resources and journeys to help
             you choose your path and grow in your career.
             <br />
