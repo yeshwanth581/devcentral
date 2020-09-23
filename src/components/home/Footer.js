@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 // import { faHome } from "@fortawesome/free-solid-svg-icons";
@@ -42,7 +42,7 @@ const Footer = () => {
             <br />
             Design inspired by{" "}
             <a
-              className="chip black"
+              className="chip"
               href="https://roadmap.sh/"
               target="_blank"
               rel="noopener noreferrer"

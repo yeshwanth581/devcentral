@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import Card from "./Card";
+import Card from "../commons/Card";
 const HomeActionButtons = () => {
   const actionList = [
     {
@@ -15,7 +15,7 @@ const HomeActionButtons = () => {
       description:
         "Find or become a mentor. Buddy gets guided by a mentor to become a better developer.",
       tags: ["Mentor", "Trainee", "Help each other"],
-      path: "/about"
+      path: "/mentor-buddy"
     },
     {
       heading: "Interview",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -24,10 +24,13 @@ export default function Header() {
         >
           <Nav>
             <Nav.Link as={Link} to="/learn">
-              <span className="headerLink">Interview</span>
+              <span className="headerLink">Learn</span>
             </Nav.Link>
-            <Nav.Link as={Link} to="/learn">
-              <span className="headerLink">Paths</span>
+            <Nav.Link as={Link} to="/mentor-buddy">
+              <span className="headerLink">Mentor/Buddy</span>
+            </Nav.Link>
+            <Nav.Link as={Link} to="/interview">
+              <span className="headerLink">Interview</span>
             </Nav.Link>
             <Nav.Link as={Link} to="/about">
               <span className="headerLink">About me</span>
