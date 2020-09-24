@@ -3,6 +3,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import PageTitleCard from "./PageTitleCard";
 import CardContainer from "../commons/CardContainer";
 import PageFilterCard from "./PageFilterCard";
+import MentorsList from "./MentorsList";
+
 const MentorBuddy = () => {
   return (
     <Container fluid>
@@ -15,6 +17,11 @@ const MentorBuddy = () => {
         <Col xs={12} sm={12} md={12} lg={6} xl={6}>
           <CardContainer>
             <PageFilterCard />
+          </CardContainer>
+        </Col>
+        <Col xs={12} sm={12} md={12} lg={12} xl={12}>
+          <CardContainer>
+            <MentorsList />
           </CardContainer>
         </Col>
       </Row>

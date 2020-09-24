@@ -38,6 +38,46 @@ $backgroundColor: white;
   }
 }
 
+.cardsList {
+  padding: 1em;
+  padding-bottom: 2.5em;
+}
+
+.vertical_line {
+  border-right: 1px solid #ececec;
+  text-align: center;
+}
+
+.center-align {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.link-text {
+  cursor: pointer;
+  color: #4E58DB;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#dropdown {
+  line-height: 1.12;
+  border: none;
+  min-width: 8rem;
+  background-color: white;
+  color:black;
+  text-align: center;
+  border: 1px solid #ececec;
+  &::after {
+    float: right;
+    margin-top: 5px;
+  }
+}
+
 .card-container {
   background-color: white;
   width: 100%;
@@ -100,10 +140,6 @@ $backgroundColor: white;
 
   .homeActionButtons {
     background-color: ghostwhite;
-    .cardsList {
-      padding: 1em;
-      padding-bottom: 2.5em;
-    }
   }
 
   .footer-section {
@@ -139,4 +175,18 @@ $backgroundColor: white;
   }
 }
 
-
+.mentor-buddy {
+  background-color: ghostwhite;
+  .page-description {
+    text-align: center;
+    padding-top: 0.5em;
+    .dropdown-menu {
+      max-height: 10em;
+      overflow: auto;
+    }
+    .dropdown-item {
+      font-size:0.9em;
+      padding: 0 0.5em 0.5em 0.5em;
+    }
+  }
+}
