@@ -8,6 +8,7 @@ import MentorsList from "./MentorsList";
 const MentorBuddy = () => {
   return (
     <Container fluid>
+      <div className="section-heading">Mentor Buddy Program</div>
       <Row className="mentor-buddy cardsList">
         <Col xs={12} sm={12} md={12} lg={6} xl={6}>
           <CardContainer>

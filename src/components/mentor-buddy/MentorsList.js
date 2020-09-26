@@ -1,4 +1,6 @@
 import React from "react";
+import { Container, Row } from "react-bootstrap";
+import MentorDetailsCard from "./MentorDetailsCard";
 
 let mentorData = [
   {
@@ -60,10 +62,20 @@ let mentorData = [
 ];
 
 const MentorsList = () => {
+  const mentorCardsList = mentorData.map((i) => (
+    <MentorDetailsCard details={i} />
+  ));
   return (
-    <div>
-      gdfg<p>gdfg</p>
-    </div>
+    <Container fluid>
+      <div className="section-heading">Mentors List</div>
+      <Row className="cardsList mentorList">
+        {mentorCardsList}
+        {mentorCardsList}
+        {mentorCardsList}
+        {mentorCardsList}
+        {mentorCardsList}
+      </Row>
+    </Container>
   );
 };
 export default MentorsList;

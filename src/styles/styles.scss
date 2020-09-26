@@ -17,7 +17,7 @@ $backgroundColor: white;
 .section-heading {
   text-align: center;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: bold;
   padding: 2vw;
 }
 
@@ -187,6 +187,52 @@ $backgroundColor: white;
     .dropdown-item {
       font-size:0.9em;
       padding: 0 0.5em 0.5em 0.5em;
+    }
+  }
+  .mentorList {
+    padding: 0em;
+  }
+  .mentor-card {
+    height: 250px;
+    .mentor-header {
+      height: 25%;
+      .mentor-badge {
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        background-color: #FFC4B0;//#FFE9B8
+        border-radius: 50%;
+        display: inline-flex;
+        font-size: 1.3em;
+      }
+      .name {
+        float: right;
+        padding: 10px;
+        font-weight: 600;
+        font-size: 1em;
+        color: black;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .mentor-description {
+      font-size: 0.9em;
+      height: 55%;
+      .mentor-message {
+        height: 63%;
+      }
+      .path-badge {
+        font-size: 80%;
+      }
+    }
+    .mentor-footer {
+      font-size: 0.9em;
+      height: 20%;
+      .tech-badge {
+        font-size: 80%;
+      }
+      //background-color: red;
     }
   }
 }
