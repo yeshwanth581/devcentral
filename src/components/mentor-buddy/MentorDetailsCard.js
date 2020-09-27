@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Col, Badge, Nav } from "react-bootstrap";
+import {
+  Col,
+  Badge,
+  Row,
+  Tooltip,
+  OverlayTrigger,
+  Button
+} from "react-bootstrap";
 import CardContainer from "../commons/CardContainer";
 let x = {
   name: "Mentor1",
@@ -32,6 +39,9 @@ let x = {
 
 const MentorDetailsCard = (props) => {
   const [showSchedule, setShowSchedule] = useState(false);
+  const [slots, setSlots] = useState([]);
+  const [selectedSlot, setSelectedSlot] = useState("");
+
   const {
     name,
     techStack,
@@ -45,26 +55,70 @@ const MentorDetailsCard = (props) => {
   } = props.details;
 
   const onHoverDescription = (
-    <div>
-      gdg<p>gfdfg</p>
+    <div className="schedule-container">
+      {schedule.map((i) => (
+        <OverlayTrigger
+          overlay={<Tooltip>{"Click to view slots for " + i.day}</Tooltip>}
+        >
+          <span
+            className="schedule-badge center-align"
+            onClick={() => setSlots(i.slots)}
+          >
+            {i.day.substr(0, 2).toUpperCase()}
+          </span>
+        </OverlayTrigger>
+      ))}
+      <div className="slots">
+        {slots.map((i) => (
+          <>
+            <Badge
+              className="timeslot"
+              onClick={() => (i.isBooked ? null : setSelectedSlot(i.time))}
+              variant={!i.isBooked ? "success" : "danger"}
+            >
+              {!i.isBooked ? i.time : <strike> {i.time}</strike>}
+            </Badge>{" "}
+          </>
+        ))}
+      </div>
+      <Row className="actions">
+        <Col>
+          {" "}
+          {selectedSlot ? (
+            <Button
+              variant="outline-success"
+              size="sm"
+              className="small-button"
+            >
+              Schedule@{selectedSlot}
+            </Button>
+          ) : null}
+        </Col>
+        <Col>
+          <Button variant="outline-primary" size="sm" className="small-button">
+            <a href={meetingUrl} className="meeting-link">
+              Join now
+            </a>
+          </Button>
+        </Col>
+      </Row>
     </div>
   );
 
   const description = (
     <>
-      <div className="mentor-message">{message_from_mentor}</div>
-      <div>
-        {paths.map((i) => (
-          <>
-            {" "}
-            <Badge className="path-badge" pill variant="warning">
-              {i}
-            </Badge>
-          </>
-        ))}
+      <div className="mentor-message">
+        {message_from_mentor.substr(0, 190) +
+          (message_from_mentor.length > 190 ? " ..." : "")}
       </div>
     </>
   );
+
+  /* const clearSelections = () => {
+    setShowSchedule(false);
+    setSlots([]);
+    setSelectedSlot("");
+  }; */
 
   return (
     <Col xs={12} sm={12} md={6} lg={4} xl={3}>
@@ -93,12 +147,12 @@ const MentorDetailsCard = (props) => {
             {showSchedule ? onHoverDescription : description}
             <hr />
           </div>
-          <div className="mentor-footer">
+          <div className="mentor-footer center-align">
             <div>
-              {techStack.map((i) => (
+              {[...paths, ...techStack].map((i) => (
                 <>
                   {" "}
-                  <Badge pill className="tech-badge" variant="info">
+                  <Badge pill className="tech-badge" variant="warning">
                     {i}
                   </Badge>
                 </>

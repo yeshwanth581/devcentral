@@ -10,7 +10,8 @@ let mentorData = [
     githubUrl: "http://github.com/yeshwanth581",
     meetingUrl: "https://meet.jit.si/devcentral_mentor_yeshwanth581",
     alternative_meetingUrl: "",
-    message_from_mentor: "Please join using my zoom meeting link",
+    message_from_mentor:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elit nulla, euismod at erat id, vestibulum pellentesque ligula. Sed feugiat a ante sed placerat. Sed non leo erat. Morbi vehicula erat tortor, vitae elementum enim aliquam vel. Nulla blandit, justo non varius euismod, tortor magna ornare erat, a cursus leo nisl non justo. Fusce id ligula non quam efficitur interdum. Vestibulum mattis rhoncus dui, at porta neque sodales sed. Quisque sit amet magna semper, molestie arcu rhoncus, sodales arcu. Mauris erat purus, aliquam id laoreet in, cursus vitae erat. Duis libero purus, sodales quis egestas at, lobortis porttitor ligula. In quis mi at enim feugiat iaculis quis vitae tortor",
     schedule: [
       {
         day: "Monday",
@@ -38,10 +39,43 @@ let mentorData = [
     githubUrl: "http://github.com/yeshwanth581",
     meetingUrl: "https://meet.jit.si/devcentral_mentor_yeshwanth581",
     alternative_meetingUrl: "",
-    message_from_mentor: "Please join using my jitsi meeting link",
+    message_from_mentor:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elit nulla, euismod at erat id, vestibulum pellentesque ligula. Sed feugiat a ante sed placerat. Sed non leo erat. Morbi vehicula erat tortor, vitae elementum enim aliquam vel. Nulla blandit, justo non varius euismod, tortor magna ornare erat, a cursus leo nisl non justo. Fusce id ligula non quam efficitur interdum. Vestibulum mattis rhoncus dui, at porta neque sodales sed. Quisque sit amet magna semper, molestie arcu rhoncus, sodales arcu. Mauris erat purus, aliquam id laoreet in, cursus vitae erat. Duis libero purus, sodales quis egestas at, lobortis porttitor ligula. In quis mi at enim feugiat iaculis quis vitae tortor",
     schedule: [
       {
         day: "Sunday",
+        slots: [
+          { time: "17.00", isBooked: false },
+          { time: "18.00", isBooked: true },
+          { time: "19.00", isBooked: false }
+        ]
+      },
+      {
+        day: "Saturday",
+        slots: [
+          { time: "17.00", isBooked: false },
+          { time: "18.00", isBooked: true },
+          { time: "19.00", isBooked: false }
+        ]
+      },
+      {
+        day: "Saturday",
+        slots: [
+          { time: "17.00", isBooked: false },
+          { time: "18.00", isBooked: true },
+          { time: "19.00", isBooked: false }
+        ]
+      },
+      {
+        day: "Saturday",
+        slots: [
+          { time: "17.00", isBooked: false },
+          { time: "18.00", isBooked: true },
+          { time: "19.00", isBooked: false }
+        ]
+      },
+      {
+        day: "Saturday",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },

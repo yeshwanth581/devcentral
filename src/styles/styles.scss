@@ -195,7 +195,7 @@ $backgroundColor: white;
   .mentor-card {
     height: 250px;
     .mentor-header {
-      height: 25%;
+      height: 24%;
       .mentor-badge {
         text-align: center;
         height: 40px;
@@ -218,17 +218,51 @@ $backgroundColor: white;
     }
     .mentor-description {
       font-size: 0.9em;
-      height: 55%;
+      height: 50%;
       .mentor-message {
-        height: 63%;
+        height: 83%;
+        line-height: 1.5;
+        overflow: hidden;
       }
-      .path-badge {
-        font-size: 80%;
+      .timeslot {
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+      .schedule-badge {
+        text-align: center;
+        height: 30px;
+        width: 30px;
+        background-color: #D0F0FF;//#FFE9B8
+        border-radius: 50%;
+        display: inline-flex;
+        font-size: 0.9em;
+        margin-right: 10px;
+        margin-top: 10px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .schedule-container {
+        height: 83%;
+        .slots {
+          height: 40%;
+          margin-top: 3px;
+        }
+        .small-button {
+          line-height: 1;
+          font-weight:600;
+          .meeting-link {
+            &:hover {
+              color: white;
+              text-decoration: underline;
+            }
+          }
+        }
       }
     }
     .mentor-footer {
       font-size: 0.9em;
-      height: 20%;
+      height: 25%;
       .tech-badge {
         font-size: 80%;
       }
