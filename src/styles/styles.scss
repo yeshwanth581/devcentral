@@ -241,6 +241,9 @@ $backgroundColor: white;
         &:hover {
           text-decoration: underline;
         }
+      &.selected-day {
+        background-color: #50AFFF;
+      }
       }
       .schedule-container {
         height: 83%;

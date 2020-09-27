@@ -40,6 +40,7 @@ let x = {
 const MentorDetailsCard = (props) => {
   const [showSchedule, setShowSchedule] = useState(false);
   const [slots, setSlots] = useState([]);
+  const [selectedDay, setSelectedDay] = useState("");
   const [selectedSlot, setSelectedSlot] = useState("");
 
   const {
@@ -61,8 +62,15 @@ const MentorDetailsCard = (props) => {
           overlay={<Tooltip>{"Click to view slots for " + i.day}</Tooltip>}
         >
           <span
-            className="schedule-badge center-align"
-            onClick={() => setSlots(i.slots)}
+            className={
+              selectedDay === i.day
+                ? "schedule-badge center-align selected-day"
+                : "schedule-badge center-align"
+            }
+            onClick={() => {
+              setSlots(i.slots);
+              setSelectedDay(i.day);
+            }}
           >
             {i.day.substr(0, 2).toUpperCase()}
           </span>
