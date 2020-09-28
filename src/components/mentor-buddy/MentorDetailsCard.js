@@ -8,34 +8,6 @@ import {
   Button
 } from "react-bootstrap";
 import CardContainer from "../commons/CardContainer";
-let x = {
-  name: "Mentor1",
-  techStack: ["Javascript", "React.js", "Node.js", "CSS", "HTML", "Git"],
-  paths: ["Frontend"],
-  githubUrl: "http://github.com/yeshwanth581",
-  meetingUrl: "https://meet.jit.si/devcentral_mentor_yeshwanth581",
-  alternative_meetingUrl: "",
-  message_from_mentor: "Please join using my zoom meeting link",
-  schedule: [
-    {
-      day: "Monday",
-      slots: [
-        { time: "17.00", isBooked: false },
-        { time: "18.00", isBooked: true },
-        { time: "19.00", isBooked: false }
-      ]
-    },
-    {
-      day: "Saturday",
-      slots: [
-        { time: "17.00", isBooked: false },
-        { time: "18.00", isBooked: true },
-        { time: "19.00", isBooked: false }
-      ]
-    }
-  ],
-  rating: 3.5
-};
 
 const MentorDetailsCard = (props) => {
   const [showSchedule, setShowSchedule] = useState(false);
@@ -57,8 +29,8 @@ const MentorDetailsCard = (props) => {
 
   const onHoverDescription = (
     <div className="schedule-container">
-      {schedule.map((i) => (
-        <OverlayTrigger
+      {schedule.map((i, index) => (
+        <OverlayTrigger key={index}
           overlay={<Tooltip>{"Click to view slots for " + i.day}</Tooltip>}
         >
           <span
@@ -116,8 +88,7 @@ const MentorDetailsCard = (props) => {
   const description = (
     <>
       <div className="mentor-message">
-        {message_from_mentor.substr(0, 190) +
-          (message_from_mentor.length > 190 ? " ..." : "")}
+        {message_from_mentor + (message_from_mentor.length > 190 ? " ..." : "")}
       </div>
     </>
   );

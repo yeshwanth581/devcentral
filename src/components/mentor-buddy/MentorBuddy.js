@@ -4,6 +4,7 @@ import PageTitleCard from "./PageTitleCard";
 import CardContainer from "../commons/CardContainer";
 import PageFilterCard from "./PageFilterCard";
 import MentorsList from "./MentorsList";
+import Footer from "../home/Footer";
 
 const MentorBuddy = () => {
   return (
@@ -26,6 +27,7 @@ const MentorBuddy = () => {
           </CardContainer>
         </Col>
       </Row>
+      <Footer />
     </Container>
   );
 };

@@ -72,6 +72,7 @@ $backgroundColor: white;
   color:black;
   text-align: center;
   border: 1px solid #ececec;
+  margin-bottom: 5px;
   &::after {
     float: right;
     margin-top: 5px;
@@ -120,6 +121,38 @@ $backgroundColor: white;
   }
 }
 
+.footer-section {
+  background-color: white;
+  padding: 2.5em 1em;
+  .footer-items {
+    padding:1em;
+    font-size: 0.9em;
+    .brand-name {
+      font-weight: 700;
+      font-size: 1.2em;
+      padding: 0.3em 0.2em 0.3em 0.6em;
+      color:black;
+      &:link {
+        text-decoration: none;
+      }
+      &:hover {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .brand-content {
+      padding: 1em 0;
+    }
+  }
+  .footer-icons-list {
+    padding-top:1em;
+    .icon {
+      cursor: pointer;
+      color: black;
+    }
+  }
+}
+
 .home {
   .header {
     height: 40vh;
@@ -141,38 +174,6 @@ $backgroundColor: white;
   .homeActionButtons {
     background-color: ghostwhite;
   }
-
-  .footer-section {
-    background-color: white;
-    padding: 2.5em 1em;
-    .footer-items {
-      padding:1em;
-      font-size: 0.9em;
-      .brand-name {
-        font-weight: 700;
-        font-size: 1.2em;
-        padding: 0.3em 0.2em 0.3em 0.6em;
-        color:black;
-        &:link {
-          text-decoration: none;
-        }
-        &:hover {
-          text-decoration: none;
-          color: white;
-        }
-      }
-      .brand-content {
-        padding: 1em 0;
-      }
-    }
-    .footer-icons-list {
-      padding-top:1em;
-      .icon {
-        cursor: pointer;
-        color: black;
-      }
-    }
-  }
 }
 
 .mentor-buddy {
@@ -180,6 +181,9 @@ $backgroundColor: white;
   .page-description {
     text-align: center;
     padding-top: 0.5em;
+    .buddy-name {
+      margin-bottom: 5px;
+    }
     .dropdown-menu {
       max-height: 10em;
       overflow: auto;

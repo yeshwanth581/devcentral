@@ -29,7 +29,7 @@ export default function Header() {
             <Nav.Link as={Link} to="/mentor-buddy">
               <span className="headerLink">Mentor/Buddy</span>
             </Nav.Link>
-            <Nav.Link as={Link} to="/interview">
+            <Nav.Link as={Link} to="/interviews">
               <span className="headerLink">Interview</span>
             </Nav.Link>
             <Nav.Link as={Link} to="/about">

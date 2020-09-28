@@ -8,7 +8,7 @@ const PageTitleCard = () => {
       <div className="card-heading">Mentor/Buddy</div>
       <div className="card-description page-description">
         <Row>
-          <Col className="vertical_line">
+          <Col className="buddy-name vertical_line">
             <span>Yeshwanth Raghavendra</span>
           </Col>
           <Col className="center-align">
