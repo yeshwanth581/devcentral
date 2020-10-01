@@ -78,6 +78,19 @@ $backgroundColor: white;
     margin-top: 5px;
   }
 }
+.dropdown-menu {
+  max-height: 10em;
+  overflow: auto;
+}
+.dropdown-item {
+  font-size:0.9em;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+.dropdown-item-selected {
+  background-color: #3366FF;
+  color: white;
+  margin-bottom: 2px;
+}
 
 .card-container {
   background-color: white;
@@ -184,14 +197,6 @@ $backgroundColor: white;
     .buddy-name {
       margin-bottom: 5px;
     }
-    .dropdown-menu {
-      max-height: 10em;
-      overflow: auto;
-    }
-    .dropdown-item {
-      font-size:0.9em;
-      padding: 0 0.5em 0.5em 0.5em;
-    }
   }
   .mentorList {
     padding: 0em;
@@ -275,5 +280,29 @@ $backgroundColor: white;
       }
       //background-color: red;
     }
+  }
+}
+
+.interview {
+  background-color: ghostwhite;
+  .interview-filter {
+    margin-top: 10px;
+  }
+  .schedule-badge {
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    background-color: #D0F0FF;//#FFE9B8
+    border-radius: 50%;
+    display: inline-flex;
+    font-size: 0.9em;
+    margin-right: 10px;
+    margin-top: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  &.selected-day {
+    background-color: #50AFFF;
+  }
   }
 }
