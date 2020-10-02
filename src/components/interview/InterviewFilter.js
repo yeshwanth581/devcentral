@@ -64,7 +64,9 @@ const InterviewFilter = () => {
     console.log(tech.split(", "), val, tech.split(", ").includes(val));
     if (tech.split(", ").includes(val)) {
       let techList = tech.split(", ").filter((i) => i !== val);
-      techList.length === 0 ? (techList = ["Select upto 2 techs"]) : null;
+      if (techList.length === 0) {
+        techList = ["Select upto 2 techs"];
+      }
       setTech(techList.join(", "));
     } else {
       if (tech.split(", ").length < 2) {
