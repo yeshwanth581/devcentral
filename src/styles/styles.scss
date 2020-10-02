@@ -38,6 +38,46 @@ $backgroundColor: white;
   }
 }
 
+.calender {
+  .react-add-to-calendar {
+    border: 1px solid #ececec;
+    text-align: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    &.success {
+      background-color: #28a745;
+    }
+  }
+  .react-add-to-calendar__button {
+    color: #000;
+  }
+  .react-add-to-calendar__dropdown {
+    position: absolute;
+    top: 40px;
+    left: 23px;
+    width: inherit;
+    padding: 5px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+    border: 1px solid #a8a8a8;
+    background-color: #fff;
+    text-align: left;
+    z-index:200;
+    max-height: 10em;
+    overflow: auto;
+  }
+  .react-add-to-calendar__dropdown ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    & li a {
+      font-size:0.9em;
+      padding: 0 0.5em 0.5em 0.5em;
+      color: #212529;
+      margin-left: -2.5em;
+      font-weight: 400;
+    }
+  }
+}
+
 .cardsList {
   padding: 1em;
   padding-bottom: 2.5em;
@@ -256,6 +296,17 @@ $backgroundColor: white;
       }
       .schedule-container {
         height: 83%;
+        .success {
+            background-color: #28a745;
+            border-radius: 9px;
+          }
+        .react-add-to-calendar__button {
+          color: white;
+          font-weight: 600;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
         .slots {
           height: 40%;
           margin-top: 3px;

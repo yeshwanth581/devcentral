@@ -15,6 +15,7 @@ let mentorData = [
     schedule: [
       {
         day: "Monday",
+        date: "05/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -23,6 +24,7 @@ let mentorData = [
       },
       {
         day: "Saturday",
+        date: "10/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -44,6 +46,7 @@ let mentorData = [
     schedule: [
       {
         day: "Sunday",
+        date: "4/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -52,6 +55,7 @@ let mentorData = [
       },
       {
         day: "Saturday",
+        date: "10/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -59,7 +63,8 @@ let mentorData = [
         ]
       },
       {
-        day: "Saturday",
+        day: "Wednesday",
+        date: "7/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -67,7 +72,8 @@ let mentorData = [
         ]
       },
       {
-        day: "Saturday",
+        day: "Tuesday",
+        date: "6/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -75,7 +81,8 @@ let mentorData = [
         ]
       },
       {
-        day: "Saturday",
+        day: "Monday",
+        date: "5/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },
@@ -84,6 +91,7 @@ let mentorData = [
       },
       {
         day: "Friday",
+        date: "3/10/2020",
         slots: [
           { time: "17.00", isBooked: false },
           { time: "18.00", isBooked: true },

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Col,
   Badge,
@@ -8,12 +8,22 @@ import {
   Button
 } from "react-bootstrap";
 import CardContainer from "../commons/CardContainer";
+import AddToCalendar from "react-add-to-calendar";
+import moment from "moment";
 
 const MentorDetailsCard = (props) => {
   const [showSchedule, setShowSchedule] = useState(false);
   const [slots, setSlots] = useState([]);
   const [selectedDay, setSelectedDay] = useState("");
   const [selectedSlot, setSelectedSlot] = useState("");
+
+  const [event, setEvent] = useState({
+    title: "DevCentral-Mentor/Buddy meetup",
+    description: "This is the event to mentor a buddy on the requested stack",
+    location: "Online",
+    starTimetTime: "2020-10-02T00:00:00+05:30",
+    endTime: "2020-10-02T00:00:00+05:30"
+  });
 
   const {
     name,
@@ -27,10 +37,40 @@ const MentorDetailsCard = (props) => {
     rating
   } = props.details;
 
+  useEffect(() => {
+    if (selectedSlot) {
+      let selectedSlotDay = schedule.find((i) => i.day === selectedDay).date;
+      selectedSlotDay = moment(selectedSlotDay, "DD/MM/YYYY").format(
+        "YYYY-MM-DDTHH:mm:ssZ"
+      );
+      console.log(selectedSlotDay);
+      let slotTime = selectedSlot.split(".")[0] * 1;
+      let startTime = moment(selectedSlotDay)
+        .startOf("day")
+        .add(slotTime, "hours")
+        .format("YYYY-MM-DDTHH:mm:ssZ");
+
+      let endTime = moment(selectedSlotDay)
+        .startOf("day")
+        .add(slotTime + 1, "hours")
+        .format("YYYY-MM-DDTHH:mm:ssZ");
+
+      setEvent({
+        ...event,
+        startTime,
+        endTime,
+        description:
+          "This is the event to mentor a buddy on the requested stack. " +
+          meetingUrl
+      });
+    }
+  }, [selectedSlot]);
+
   const onHoverDescription = (
     <div className="schedule-container">
       {schedule.map((i, index) => (
-        <OverlayTrigger key={index}
+        <OverlayTrigger
+          key={index}
           overlay={<Tooltip>{"Click to view slots for " + i.day}</Tooltip>}
         >
           <span
@@ -42,6 +82,7 @@ const MentorDetailsCard = (props) => {
             onClick={() => {
               setSlots(i.slots);
               setSelectedDay(i.day);
+              setSelectedSlot("");
             }}
           >
             {i.day.substr(0, 2).toUpperCase()}
@@ -65,13 +106,12 @@ const MentorDetailsCard = (props) => {
         <Col>
           {" "}
           {selectedSlot ? (
-            <Button
-              variant="outline-success"
-              size="sm"
-              className="small-button"
-            >
-              Schedule@{selectedSlot}
-            </Button>
+            <div className="calender success">
+              <AddToCalendar
+                event={event}
+                buttonLabel={"Schedule@" + selectedSlot}
+              />
+            </div>
           ) : null}
         </Col>
         <Col>
