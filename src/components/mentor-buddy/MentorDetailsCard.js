@@ -31,7 +31,7 @@ const MentorDetailsCard = (props) => {
     paths,
     githubUrl,
     meetingUrl,
-    alternative_meetingUrl,
+    //alternative_meetingUrl,
     message_from_mentor,
     schedule,
     rating

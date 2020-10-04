@@ -1,9 +1,9 @@
 import React from "react";
-import { Col, Row, Container } from "react-bootstrap";
-import { v4 as uuidv4 } from "uuid";
+import { Row, Container } from "react-bootstrap";
+//import { v4 as uuidv4 } from "uuid";
 import InterviewDetailsCard from "./InterviewDetailsCard";
 
-let interviewAvailabilityList = [
+/* let interviewAvailabilityList = [
   {
     id: 1,
     title: "Interview FullStack-JS",
@@ -54,7 +54,7 @@ let interviewAvailabilityList = [
       }
     ]
   }
-];
+]; */
 
 const InterviewListCards = () => {
   return (

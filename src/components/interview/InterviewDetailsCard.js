@@ -136,9 +136,7 @@ const InterviewDetailsCard = (props) => {
                     size="sm"
                     className="small-button"
                   >
-                    <a href={"ggf"} className="meeting-link">
-                      Join now
-                    </a>
+                    <span className="meeting-link">Join now</span>
                   </Button>
                 </div>
               </Col>
@@ -148,9 +146,7 @@ const InterviewDetailsCard = (props) => {
                   size="sm"
                   className="small-button"
                 >
-                  <a href={"htjtr"} className="meeting-link">
-                    Join now
-                  </a>
+                  <span className="meeting-link">Join now</span>
                 </Button>
               </Col>
             </Row>
