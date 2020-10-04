@@ -1,6 +1,7 @@
 import React from "react";
-import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid";
+import InterviewDetailsCard from "./InterviewDetailsCard";
 
 let interviewAvailabilityList = [
   {
@@ -17,7 +18,38 @@ let interviewAvailabilityList = [
           { slot: "18:00", isAccepted: false },
           { slot: "12:00", isAccepted: false }
         ],
+        interviewerEmail: "",
+        meetingUrl: "https://meet.jit.si/devcentral/" + uuidv4()
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Interview Frontend-React.js",
+    stack: "ReactJs",
+    requests: [
+      {
+        id: 1,
+        email: "requestor1@gmail.com",
+        acceptableSchedules: [
+          { slot: "17:00", isAccepted: false },
+          { slot: "18:00", isAccepted: false },
+          { slot: "19:00", isAccepted: true },
+          { slot: "20:00", isAccepted: false }
+        ],
         interviewerEmail: "interviewer1@gmail.com",
+        meetingUrl: "https://meet.jit.si/devcentral/" + uuidv4()
+      },
+      {
+        id: 2,
+        email: "requestor2@gmail.com",
+        acceptableSchedules: [
+          { slot: "10:00", isAccepted: false },
+          { slot: "11:00", isAccepted: false },
+          { slot: "12:00", isAccepted: false },
+          { slot: "13:00", isAccepted: false }
+        ],
+        interviewerEmail: "",
         meetingUrl: "https://meet.jit.si/devcentral/" + uuidv4()
       }
     ]
@@ -25,19 +57,13 @@ let interviewAvailabilityList = [
 ];
 
 const InterviewListCards = () => {
-  const [selectedDay, setSelectedDay] = [""];
-
   return (
-    <>
-      <div className="card-heading">Select a day for interview</div>
-      <div className="card-description page-description">
-        <Row>
-          <Col className="center-align">
-            <div className="schedule-container">{selectedDay}</div>
-          </Col>
-        </Row>
-      </div>
-    </>
+    <Container fluid>
+      <div className="section-heading">Interview List</div>
+      <Row className="cardsList interviewList">
+        <InterviewDetailsCard />
+      </Row>
+    </Container>
   );
 };
 export default InterviewListCards;

@@ -38,12 +38,23 @@ $backgroundColor: white;
   }
 }
 
+.small-button {
+  line-height: 1;
+  font-weight:600;
+  &:hover {
+    .meeting-link {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+}
+
 .calender {
   .react-add-to-calendar {
-    border: 1px solid #ececec;
     text-align: center;
     padding: 0 10px;
     border-radius: 5px;
+    line-height: 1.65;
     &.success {
       background-color: #28a745;
     }
@@ -253,6 +264,7 @@ $backgroundColor: white;
         border-radius: 50%;
         display: inline-flex;
         font-size: 1.3em;
+        font-weight: 600;
       }
       .name {
         float: right;
@@ -298,7 +310,7 @@ $backgroundColor: white;
         height: 83%;
         .success {
             background-color: #28a745;
-            border-radius: 9px;
+            border-radius: 5px;
           }
         .react-add-to-calendar__button {
           color: white;
@@ -313,13 +325,6 @@ $backgroundColor: white;
         }
         .small-button {
           line-height: 1;
-          font-weight:600;
-          .meeting-link {
-            &:hover {
-              color: white;
-              text-decoration: underline;
-            }
-          }
         }
       }
     }
@@ -352,8 +357,68 @@ $backgroundColor: white;
     &:hover {
       text-decoration: underline;
     }
-  &.selected-day {
-    background-color: #50AFFF;
+    &.selected-day {
+      background-color: #50AFFF;
+    }
   }
+  .interviewList {
+    padding: 0em;
+    .interview-card {
+      min-height: 250px;
+      .interview-header {
+        height: 24%;
+        .interview-badge {
+          text-align: center;
+          height: 40px;
+          width: 40px;
+          background-color: #91D351;
+          border-radius: 50%;
+          display: inline-flex;
+          font-size: 1.3em;
+          font-weight:600;
+        }
+        .title {
+          float: right;
+          padding: 10px;
+          display: inline-flex;
+          justify-content: center;
+          text-align: center;
+          font-weight: 600;
+          font-size: 1em;
+          color: black;
+        }
+      }
+      .interview-description {
+        font-size: 0.95em;
+        height: 50%;
+        .interview-message {
+          height: 83%;
+          line-height: 1.5;
+        }
+        .requests-list {
+          padding-top: 5px;
+          .request {
+            margin-left: 5px;
+            font-size: 0.8rem;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        .stack-list {
+          padding-top: 10px;
+          .tech-badge {
+            margin-left: 5px;
+            font-size: 90%;
+          }
+        }
+      }
+      .interview-footer {
+        margin-top: -5px;
+        .small-button {
+          line-height: 1;
+        }
+      }
+    }
   }
 }

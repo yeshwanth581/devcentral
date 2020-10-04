@@ -4,6 +4,7 @@ import CardContainer from "../commons/CardContainer";
 import Footer from "../home/Footer";
 import InterviewDaysList from "./InterviewDaysList";
 import InterviewFilter from "./InterviewFilter";
+import InterviewListCards from "./InterviewListCards";
 
 const Interviews = () => {
   return (
@@ -21,7 +22,9 @@ const Interviews = () => {
           </CardContainer>
         </Col>
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
-          <CardContainer></CardContainer>
+          <CardContainer>
+            <InterviewListCards />
+          </CardContainer>
         </Col>
       </Row>
       <Footer />
