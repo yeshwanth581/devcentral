@@ -133,15 +133,18 @@ $backgroundColor: white;
   max-height: 10em;
   overflow: auto;
 }
-.dropdown-item {
-  font-size:0.9em;
-  padding: 0 0.5em 0.5em 0.5em;
-}
+
 .dropdown-item-selected {
   background-color: #3366FF;
   color: white;
   margin-bottom: 2px;
 }
+
+.dropdown-item {
+  font-size:0.9em;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+
 
 .card-container {
   background-color: white;
@@ -364,7 +367,7 @@ $backgroundColor: white;
   .interviewList {
     padding: 0em;
     .interview-card {
-      min-height: 250px;
+      min-height: 265px;
       .interview-header {
         height: 24%;
         .interview-badge {
@@ -390,7 +393,7 @@ $backgroundColor: white;
       }
       .interview-description {
         font-size: 0.95em;
-        height: 50%;
+        height: 150px;
         .interview-message {
           height: 83%;
           line-height: 1.5;
@@ -412,12 +415,42 @@ $backgroundColor: white;
             font-size: 90%;
           }
         }
+        .add-request {
+          .add-slots  {
+            #dropdown {
+              width: 100%;
+              line-height: 1.5;
+            }
+          }
+      }
+      .email,.meeting-url {
+        margin-bottom: 10px;
+        word-break:break-all;
+        .meeting-url-text {
+          text-overflow: ellipsis;
+        }
+      }
+      .time-slots {
+          margin-left: 5px;
+          font-size: 90%;
+        
+      }
+          
       }
       .interview-footer {
         margin-top: -5px;
+        text-align: center;
         .small-button {
           line-height: 1;
-          color: black;
+          font-weight: 600;
+          &.disabled {
+            cursor: no-drop;
+            &:hover {
+              .meeting-link {
+                text-decoration: none;
+              }
+            }
+          }
         }
       }
     }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 let dayMapper = [
@@ -17,7 +17,7 @@ const next7Days = new Array(7).fill(0).map((i, ind) => {
 });
 
 const InterviewDaysList = () => {
-  const [selectedDay, setSelectedDay] = [""];
+  const [selectedDay, setSelectedDay] = useState("");
 
   const daysSchedule = next7Days.map((i, index) => (
     <OverlayTrigger

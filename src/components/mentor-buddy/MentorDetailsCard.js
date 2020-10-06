@@ -115,7 +115,12 @@ const MentorDetailsCard = (props) => {
           ) : null}
         </Col>
         <Col>
-          <Button variant="outline-primary" size="sm" className="small-button">
+          <Button
+            variant="outline-primary"
+            size="sm"
+            block
+            className="small-button"
+          >
             <a href={meetingUrl} className="meeting-link">
               Join now
             </a>

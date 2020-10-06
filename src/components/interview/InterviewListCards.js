@@ -62,6 +62,8 @@ const InterviewListCards = () => {
       <div className="section-heading">Interview List</div>
       <Row className="cardsList interviewList">
         <InterviewDetailsCard />
+        <InterviewDetailsCard />
+        <InterviewDetailsCard />
       </Row>
     </Container>
   );

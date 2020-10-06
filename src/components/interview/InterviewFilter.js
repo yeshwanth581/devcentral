@@ -46,8 +46,8 @@ const InterviewFilter = () => {
         key={techData.value}
         className={
           tech.split(", ").includes(techData.value)
-            ? "path-dropdown-item dropdown-item-selected"
-            : "path-dropdown-item"
+            ? "dropdown-item dropdown-item-selected"
+            : "dropdown-item"
         }
         onClick={() => setSelectedTech(techData.value)}
       >
