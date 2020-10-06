@@ -219,46 +219,51 @@ const InterviewDetailsCard = (props) => {
     </div>
   ) : null;
 
-  const viewRequestDetails = selectedRequestId ? (
-    <div className="view-request">
-      <div className="email">
-        {selectedRequestId.email}
-        <br />
-        {selectedRequestId.interviewerEmail}
-      </div>
-      <div className="meeting-url">
-        <Row>
-          <Col>
-            <Button
-              variant="info"
-              size="sm"
-              block
-              onClick={() => setAction("VIEW_DETAILS")}
-              className="small-button"
-            >
-              <span className="meeting-link">Copy meeting info</span>
-            </Button>
-          </Col>
-          <Col>
-            <Button
-              variant="outline-success"
-              size="sm"
-              block
-              onClick={() => setAction("VIEW_DETAILS")}
-              className="small-button"
-            >
-              <span className="meeting-link">
-                {"Calendar : " +
+  const viewRequestDetails =
+    selectedRequestId && action === "VIEW_DETAILS" ? (
+      <div className="view-request">
+        <div className="email">
+          {selectedRequestId.email}
+          <br />
+          {selectedRequestId.interviewerEmail}
+        </div>
+        <div className="meeting-url">
+          <Row>
+            <Col>
+              <Button
+                variant="info"
+                size="sm"
+                block
+                onClick={() => setAction("VIEW_DETAILS")}
+                className="small-button"
+              >
+                <span className="meeting-link">Copy meeting info</span>
+              </Button>
+            </Col>
+            <Col>
+              <Button
+                variant="outline-success"
+                size="sm"
+                block
+                onClick={() => setAction("VIEW_DETAILS")}
+                className="small-button"
+              >
+                <span className="meeting-link">
+                  {"Calendar : " +
                   selectedRequestId.acceptableSchedules.find(
                     (i) => i.isAccepted
-                  ).slot}
-              </span>
-            </Button>
-          </Col>
-        </Row>
+                  )
+                    ? selectedRequestId.acceptableSchedules.find(
+                        (i) => i.isAccepted
+                      ).slot
+                    : ""}
+                </span>
+              </Button>
+            </Col>
+          </Row>
+        </div>
       </div>
-    </div>
-  ) : null;
+    ) : null;
 
   const descriptionDetails = (
     <div>
